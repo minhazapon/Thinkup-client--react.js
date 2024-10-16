@@ -13,11 +13,11 @@ import Home from './Home';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home> ,
+    element:  <Root></Root> ,
     children: [
       {
         path: "/",
-        element:  <Root></Root>  ,
+        element: <Home></Home> ,
       },
     ],
   },
