@@ -1,6 +1,7 @@
 import Banner from "./home file/Banner";
 import Explore from "./home file/Explore";
 import MernStack from "./home file/MernStack";
+import Official from "./official documents/Official";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <MernStack></MernStack>
             <Explore></Explore>
+            <Official></Official>
             
         </div>
     );
