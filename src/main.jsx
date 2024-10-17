@@ -25,9 +25,9 @@ import Explore from './home file/Explore';
 
 
 import {
-  useQuery,
-  useMutation,
-  useQueryClient,
+  // useQuery,
+  // useMutation,
+  // useQueryClient,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
