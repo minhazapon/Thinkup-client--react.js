@@ -69,7 +69,7 @@ const Footer = () => {
         name="message"
         required
         className="input  border-[1px] border-blue-900 join-item" />
-       <button className="btn bg-blue-900 text-white border-[1px] border-blue-800 join-item">Subscribe</button>
+       <button className="btn bg-blue-900 text-white border-[1px] border-blue-800 join-item">Send Message</button>
     </div>
   </fieldset>
 </form>
