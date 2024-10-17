@@ -1,6 +1,41 @@
+import Swal from "sweetalert2";
 
 
 const Footer = () => {
+
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+  
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "e87151e8-7baa-471d-b58a-0bd71fe1cd67");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      Swal.fire({
+        title: 'Send Message Successfully!',
+        text: 'Do you want to continue',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+      event.target.reset();
+    } else {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
+      setResult(data.message);
+    }
+  };
 
 
     return (
@@ -14,7 +49,7 @@ const Footer = () => {
 
     
 <div className=" ">
-<form>
+<form onSubmit={onSubmit} >
   
   <div className=" flex justify-center items-center gap-5">
     <img className=" h-[100px]" src="https://cdn-icons-png.flaticon.com/128/10211/10211870.png" alt="" />
@@ -27,18 +62,14 @@ const Footer = () => {
     </div>
 
   <fieldset className="form-control w-80 mt-5 ">
-    <div className="join ">
+    <div className="join text-black font-thin ">
       <input
         type="text"
         placeholder="Send Message For Help"
+        name="message"
+        required
         className="input  border-[1px] border-blue-900 join-item" />
-      <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-black  shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-black group-hover:translate-x-0 ease">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-      </span>
-      <span class="absolute flex items-center justify-center w-full h-full text-black transition-all duration-300 transform group-hover:translate-x-full ease">Send </span>
-      <span class="relative invisible">Send </span>
-      </a>
+       <button className="btn bg-blue-900 text-white border-[1px] border-blue-800 join-item">Subscribe</button>
     </div>
   </fieldset>
 </form>
