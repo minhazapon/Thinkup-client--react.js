@@ -1,25 +1,22 @@
 
 
-import { useEffect, useState } from "react";
 import DetailsJ from "./DetailsJ";
-
-
-
-
+import { useQuery } from "@tanstack/react-query";
 
 
 const JavaScript = () => {
 
-    const [user, setUser] = useState([])
-
-    useEffect( () =>{
-       
-        fetch('http://localhost:5000/javascriptData')
-        .then(res => res.json())
-        .then( data => setUser(data) )
 
 
-    } , [])
+    const { data: query } = useQuery({
+        queryKey:['query'],
+        queryFn: async () =>{
+           const res = await fetch('http://localhost:5000/javascriptData')
+           return res.json();
+        }
+      })
+ 
+
 
     return (
         <div className=" mt-10 mb-10 ml-10 mr-10 flex justify-center ">
@@ -27,7 +24,7 @@ const JavaScript = () => {
             <div className=" grid  md:grid-cols-3 gap-5">
 
                    {
-                    user.map( user => <DetailsJ user={user}></DetailsJ>  )
+                    query?.map( user => <DetailsJ user={user}></DetailsJ>  )
                    }
                
 

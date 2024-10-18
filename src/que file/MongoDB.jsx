@@ -5,17 +5,11 @@ import DetailsM from "./DetailsM";
 const MongoDB = () => {
 
     const { data: query } = useQuery({
-
         queryKey:['query'],
         queryFn: async () =>{
-            
            const res = await fetch('http://localhost:5000/mongoData')
            return res.json();
-  
-  
         }
-  
-  
       })
 
 

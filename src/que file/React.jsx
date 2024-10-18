@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { useState } from "react";
+
 import DetailsR from "./DetailsR";
+import { useQuery } from "@tanstack/react-query";
 
 
 
@@ -8,14 +8,15 @@ import DetailsR from "./DetailsR";
 const React = () => {
     
 
-    const [ react, setReact ] = useState([])
+   
+    const { data: query } = useQuery({
+        queryKey:['query'],
+        queryFn: async () =>{
+           const res = await fetch('http://localhost:5000/reactData')
+           return res.json();
+        }
+      })
 
-
-    useEffect( () =>{
-      fetch('http://localhost:5000/reactData')
-      .then( res => res.json())
-      .then( data => setReact(data) )
-    } , [])
 
 
     return (
@@ -25,7 +26,7 @@ const React = () => {
             <div className=" grid  md:grid-cols-3 gap-5">
 
                  {
-                    react.map( react => <DetailsR react={react} ></DetailsR> )
+                    query?.map( react => <DetailsR react={react} ></DetailsR> )
                  }
 
 

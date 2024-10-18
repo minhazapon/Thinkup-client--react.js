@@ -1,21 +1,22 @@
 
-import { useEffect, useState } from "react";
+
 import DeatilsT from "./DeatilsT";
+import { useQuery } from "@tanstack/react-query";
 
 
 
 const TypeScript = () => {
 
-    const [ type, setType ] = useState([])
+   
 
 
-    useEffect( () =>{
-
-       fetch('http://localhost:5000/typescriptData')
-       .then( res => res.json())
-       .then( data => setType(data) )
-
-    } , [])
+    const { data: query } = useQuery({
+        queryKey:['query'],
+        queryFn: async () =>{
+           const res = await fetch('http://localhost:5000/typescriptData')
+           return res.json();
+        }
+      })
  
 
 
@@ -27,7 +28,7 @@ const TypeScript = () => {
 
                   {
 
-                  type.map( type =>  <DeatilsT type={type} ></DeatilsT> )
+                  query?.map( type =>  <DeatilsT type={type} ></DeatilsT> )
 
                   }
 
