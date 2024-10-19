@@ -31,6 +31,8 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import Update from './crud file/Update';
+import Read from './crud file/Read';
 
 
 // Create a client
@@ -101,6 +103,14 @@ const router = createBrowserRouter([
       {
         path: "/graphql",
         element: <GraphQL></GraphQL> ,
+      },
+      {
+        path: "/update",
+        element:  <Update></Update> ,
+      },
+      {
+        path: "/read",
+        element: <Read></Read> ,
       },
     ],
   },
