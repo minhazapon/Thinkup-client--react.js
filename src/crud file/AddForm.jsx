@@ -30,10 +30,10 @@ const AddForm = () => {
        .then( data => {
          console.log(data)  
 
-         if(data){
+         if(data.insertedId){
             
           Swal.fire({
-            title: 'added done!',
+            title: 'Added done!',
             text: 'Do you want to continue',
             icon: 'success',
             confirmButtonText: 'Cool'
