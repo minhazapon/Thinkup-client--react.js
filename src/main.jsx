@@ -33,6 +33,8 @@ import {
 } from '@tanstack/react-query'
 import Update from './crud file/Update';
 import Read from './crud file/Read';
+import Login from './firebase and sign/Login';
+import SignUp from './firebase and sign/SignUp';
 
 
 // Create a client
@@ -113,16 +115,22 @@ const router = createBrowserRouter([
         path: "/read",
         element: <Read></Read> ,
       },
+      {
+        path: "/login",
+        element: <Login></Login> ,
+      },
+      {
+        path: "/up",
+        element: <SignUp></SignUp> ,
+      },
     ],
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
-    <QueryClientProvider client={queryClient}>
-     <RouterProvider router={router} />
-    </QueryClientProvider>
-   
+      <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      </QueryClientProvider>
   </StrictMode>,
 )
