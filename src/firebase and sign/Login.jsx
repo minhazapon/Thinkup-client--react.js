@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 
 
 
+
 const Login = () => {
+
+
     return (
         <div>
 
 
 <div className=" mb-10 mt-10 ml-10 mr-10">
         <div className=" flex justify-center ">
-                <div className="  animate__animated   animate__flip animate__repeat-2      w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gradient-to-r from-[#2bddd4] to-black text-gray-100">
+                <div className="        w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gradient-to-r from-[#2bddd4] to-blue-900 text-gray-100">
                 <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>          
         <p className="text-sm text-center text-gray-400">Don't have account?
           
@@ -37,7 +40,7 @@ const Login = () => {
             <p className="px-3 text-gray-400">OR</p>
             <hr  className="w-full text-gray-400" />
         </div>
-        <form  className="space-y-8">
+        <form  onSubmit={handleIn} className="space-y-8">
             <div className="space-y-4">
                 <div className="space-y-2">
                     <label htmlFor="email" className="block text-sm">Email address</label>

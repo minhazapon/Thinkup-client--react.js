@@ -1,6 +1,12 @@
 
 
+
 const SignUp = () => {
+
+
+
+
+
     return (
         <div>
 
@@ -9,11 +15,11 @@ const SignUp = () => {
         <div className=" flex justify-center">
         
         
-        <div className=" animate__animated   animate__flip animate__repeat-2 w-full max-w-md p-8 space-y-3 rounded-xl  bg-gradient-to-r from-[#2bddd4] to-black text-gray-100">
+        <div className="  w-full max-w-md p-8 space-y-3 rounded-xl  bg-gradient-to-r from-[#2bddd4] to-blue-900 text-gray-100">
         
         
         <h1 className="text-4xl  font-serif text-center">Sign Up</h1>
-        <form className="space-y-6">
+        <form onSubmit={handleUp} className="space-y-6">
             
             <div className="space-y-1 text-sm">
                 <label htmlFor="username" className="block text-gray-400">Email</label>

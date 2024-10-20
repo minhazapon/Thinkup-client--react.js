@@ -37,6 +37,7 @@ import Login from './firebase and sign/Login';
 import SignUp from './firebase and sign/SignUp';
 
 
+
 // Create a client
 const queryClient = new QueryClient()
 
@@ -130,7 +131,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+
+        <RouterProvider router={router} />
+
       </QueryClientProvider>
   </StrictMode>,
 )

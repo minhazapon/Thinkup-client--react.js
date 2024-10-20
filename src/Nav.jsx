@@ -27,6 +27,8 @@ const Nav = () => {
      <div className=" flex items-center gap-1"> <img className=" h-[25px] w-[25px] " src="https://web.programming-hero.com/home/_next/static/media/Redux.3c411e0e.svg" alt="" /> <p className=" font-serif text-xs ">Redux</p> </div></NavLink></li>
      <li className=" text-black "><NavLink to='/postGres' >
      <div className=" flex items-center gap-1"> <img className=" h-[25px] w-[25px] " src="https://web.programming-hero.com/home/_next/static/media/PostgresSQL.990339a4.svg" alt="" /> <p className=" font-serif text-xs ">PostGreSql</p> </div></NavLink></li>
+     <li className=" text-black "><NavLink to='/aws' >
+     <div className=" flex items-center gap-1"> <img className=" h-[25px] w-[25px] " src="https://www.logo.wine/a/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.svg" alt="" /> <p className=" font-serif text-xs ">AWS</p> </div></NavLink></li>
     
     
    
@@ -79,7 +81,7 @@ const Nav = () => {
              {navZ}
             </ul>
           </div>
-          <div className="navbar-end">
+          {/* <div className="navbar-end">
 
 
             <Link to='/login' >
@@ -96,7 +98,7 @@ const Nav = () => {
              
           
 
-          </div>
+          </div> */}
         </div>
             
         </div>
