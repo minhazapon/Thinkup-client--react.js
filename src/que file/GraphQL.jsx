@@ -10,7 +10,7 @@ const GraphQL = () => {
         queryKey: ['query'],
         queryFn: async () =>{
          
-            const res = await fetch('http://localhost:5000/graphqlData')
+            const res = await fetch('https://thinkup-server-express-js.onrender.com/graphqlData')
             return res.json();
 
         }

@@ -10,7 +10,7 @@ const Express = () => {
         queryKey:['query'],
         queryFn: async () =>{
 
-          const res = await fetch('http://localhost:5000/expressData') 
+          const res = await fetch('https://thinkup-server-express-js.onrender.com/expressData') 
           return res.json();   
 
         }

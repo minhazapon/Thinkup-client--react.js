@@ -12,7 +12,7 @@ const React = () => {
     const { data: query } = useQuery({
         queryKey:['query'],
         queryFn: async () =>{
-           const res = await fetch('http://localhost:5000/reactData')
+           const res = await fetch('https://thinkup-server-express-js.onrender.com/reactData')
            return res.json();
         }
       })

@@ -10,7 +10,7 @@ const Next = () => {
     const { data: query } = useQuery({
         queryKey:['query'],
         queryFn: async () =>{
-           const res = await fetch('http://localhost:5000/nextData')
+           const res = await fetch('https://thinkup-server-express-js.onrender.com/nextData')
            return res.json();
         }
       })

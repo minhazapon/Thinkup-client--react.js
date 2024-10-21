@@ -10,7 +10,7 @@ const PostGreSql = () => {
        queryKey: ['query'],
        queryFn: async () =>{
          
-         const res = await fetch('http://localhost:5000/postgresData')
+         const res = await fetch('https://thinkup-server-express-js.onrender.com/postgresData')
          return res.json()
 
        }

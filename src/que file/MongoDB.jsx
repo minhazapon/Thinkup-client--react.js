@@ -7,7 +7,7 @@ const MongoDB = () => {
     const { data: query } = useQuery({
         queryKey:['query'],
         queryFn: async () =>{
-           const res = await fetch('http://localhost:5000/mongoData')
+           const res = await fetch('https://thinkup-server-express-js.onrender.com/mongoData')
            return res.json();
         }
       })

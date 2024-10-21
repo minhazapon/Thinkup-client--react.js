@@ -9,7 +9,7 @@ const Docker = () => {
     const { data: query } = useQuery({
         queryKey:['query'],
         queryFn: async () =>{
-           const res = await fetch('http://localhost:5000/dockerData')
+           const res = await fetch('https://thinkup-server-express-js.onrender.com/dockerData')
            return res.json();
         }
     })

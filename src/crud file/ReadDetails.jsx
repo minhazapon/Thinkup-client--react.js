@@ -25,7 +25,7 @@ const ReadDetails = ({query}) => {
             if (result.isConfirmed) {
           
              
-             fetch(`http://localhost:5000/queData/${_id}`, {
+             fetch(`https://thinkup-server-express-js.onrender.com/queData/${_id}`, {
                
                 method: 'DELETE',
 

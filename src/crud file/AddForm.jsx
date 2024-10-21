@@ -18,7 +18,7 @@ const AddForm = () => {
        const all = { question, answer }
        console.log(all)
 
-       fetch('http://localhost:5000/queData', {
+       fetch('https://thinkup-server-express-js.onrender.com/queData', {
 
          method: 'POST',
          headers:{

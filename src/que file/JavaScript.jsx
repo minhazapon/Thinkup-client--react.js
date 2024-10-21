@@ -11,7 +11,7 @@ const JavaScript = () => {
     const { data: query } = useQuery({
         queryKey:['query'],
         queryFn: async () =>{
-           const res = await fetch('http://localhost:5000/javascriptData')
+           const res = await fetch('https://thinkup-server-express-js.onrender.com/javascriptData')
            return res.json();
         }
       })

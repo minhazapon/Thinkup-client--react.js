@@ -12,7 +12,7 @@ const AWS = () => {
             queryKey: ['query'],
             queryFn: async () =>{
               
-                const res = await fetch('http://localhost:5000/awsData')
+                const res = await fetch('https://thinkup-server-express-js.onrender.com/awsData')
                 return res.json()
 
             }
